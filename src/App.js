@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Layout } from 'antd'
+import { AddTodo } from './components/AddTodo'
+import { TodoList } from './components/TodoList'
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const containerStyle: React.CSSProperties = {
+  paddingInline: 50,
 }
 
-export default App;
+const App = () => (
+  <Layout style={containerStyle}>
+    <AddTodo />
+    <TodoList />
+  </Layout>
+)
+
+export default App
